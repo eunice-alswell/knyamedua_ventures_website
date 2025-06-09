@@ -14,7 +14,7 @@
 }
 
 .fadeInBottom {
-  animation: fadeInBottom 1s ease-out forwards;
+  animation: fadeInBottom 3s ease-out forwards;
 }
 
 @keyframes fadeInBottom {
@@ -27,4 +27,22 @@
     transform: translateY(0);
   }
 }
+
+.fadeOnScroll {
+  animation: fadeOnScroll linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes fadeOnScroll {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 

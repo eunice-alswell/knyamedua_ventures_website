@@ -1,4 +1,5 @@
 import Button from "./Button";
+import CardComponent from "./CardComponent";
 import Navbar from "./Header";
 
 export default function HomePageComponent() {
@@ -7,7 +8,7 @@ export default function HomePageComponent() {
     <div>
         <Navbar/>
         <main className="min-h-screen ">
-          <div className="bg-[url('/LPG_worker.jpg')] bg-cover bg-center h-[90vh] w-full">
+          <div className="bg-[url('/LPG_worker.jpg')] bg-cover bg-center h-[100vh] w-full">
             <div className="flex items-center justify-start h-full w-full bg-primarycolor/70 ">
               <div className="max-w-screen-7xl mx-auto text-white px-6 lg:px-30">
                 <div className="w-2/4">
@@ -21,6 +22,10 @@ export default function HomePageComponent() {
               </div>
             </div>
           </div>
+          <div className="absolute top-180 left-0 fadeOnScroll">
+            <CardComponent/>
+          </div>
+          
         </main>
     </div>
   );
