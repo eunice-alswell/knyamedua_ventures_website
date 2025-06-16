@@ -5,6 +5,9 @@ import Navbar from "./Header";
 import { cardDatails, serviceCardDetails } from "../utils/cardData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faHandshake, faHelmetSafety, faRankingStar, faTruckRampBox} from "@fortawesome/free-solid-svg-icons";
+import ProductCard from "./ProductCard";
+import { productData } from "../utils/productData";
+import Footer from "./Footer";
 
 export default function HomePageComponent() {
   // This is a simple home page component that can be used in the in any part of the website.
@@ -137,7 +140,7 @@ export default function HomePageComponent() {
                 <div className="flex items-center justify-center  h-full lg:order-2">
                   <div className="relative w-[300px] h-[300px] lg:w-[460px] lg:h-[480px] ">
                     <svg
-                      className="absolute top-0 left-0 w-[370px] h-[350px] lg:w-[450px] lg:h-[460px]"
+                      className="absolute top-0 left-0 w-[360px] h-[340px] lg:w-[450px] lg:h-[460px]"
                       height="460"
                       width="450"
                       fill="none"
@@ -223,8 +226,33 @@ export default function HomePageComponent() {
               </div>
             </div>
           </div>
+          {/* Products section */}
+          <div className="w-full h-[230vh] lg:h-[110vh]">
+            <div className=" bg-primarycolor h-[60vh]">
+              <div className="max-w-screen-xl mx-auto">
+                <div className="w-full px-6 py-10 ">
+                  <div className="flex items-center justify-center gab-6 text-white">
+                    <hr className="w-20 border-1 border-secondary"/>
+                    <h1 className="text-xl font-normal p-4 fadeInBottom">Our Products</h1>
+                  </div>
+                  <div className="flex flex-col items-center justify-center text-white text-center">
+                    <h2 className="text-3xl lg:text-4xl font-semibold pb-5">Expore our Available Products</h2>
+                    <p className="text-sm pb-5 lg:px-50">We supply industry-tested and certified LPG equipment that meets the highest safety and efficiency standards. Our products are designed to support safe energy usage across homes, businesses, and industries.</p>
+                  </div>
+                  <div className="w-full pt-5">
+                    <ProductCard products={productData} limit={3} />
+                  </div>
+                  <div className="flex justify-center" >
+                    <Button label="View More Products" size="large"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           
         </main>
+        {/* Footer section */}
+        <Footer/>
     </div>
   );
 }
