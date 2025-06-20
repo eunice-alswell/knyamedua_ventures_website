@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faBuildingShield, faCertificate, faFireBurner, faMedal, faTemperatureArrowUp, faWrench } from "@fortawesome/free-solid-svg-icons";
+import {faArrowsToCircle, faBuildingShield, faCertificate, faEye, faFireBurner, faMedal, faTemperatureArrowUp, faWrench } from "@fortawesome/free-solid-svg-icons";
 import type { CardProps } from "../components/CardComponent";
 
 export const cardDatails: CardProps[] = [
@@ -43,6 +43,22 @@ export const serviceCardDetails: CardProps[] = [
             icon: <FontAwesomeIcon icon={faWrench} />
         }
     ]
+
+export const VisionMission: CardProps[] = [
+    {
+        title:"Our Mission",
+        description:" To deliver safe, reliable, and cost-effective LPG infrastructure and solutions that power industries, businesses, and homes across Ghana—while prioritizing customer satisfaction, safety, and sustainability.",
+        // CTA: "Read more",
+        icon: <FontAwesomeIcon icon={faArrowsToCircle} />
+    },
+    {
+        title:"Our Vision",
+        description:"To be a leading provider of LPG energy solutions in West Africa, setting the standard for safety, innovation, and environmental responsibility.",
+        // CTA: "Read more",
+        icon: <FontAwesomeIcon icon={faEye} />
+    },
+
+]
 
 
 
