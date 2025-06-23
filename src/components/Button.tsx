@@ -8,8 +8,9 @@ type ButtonProps = {
     label?: string;
     rightIcon?: React.ReactNode;
     leftIcon?: React.ReactNode;
+    type?: "button" | "submit" | "reset";
 };
-export default function Button({variantStyle = "defualtStyle", size = "medium", onClick, label, rightIcon, leftIcon}: ButtonProps) {
+export default function Button({variantStyle = "defualtStyle", size = "medium", onClick, label, rightIcon, leftIcon, type = "button"}: ButtonProps) {
     // This is a simple button component that can be used in the in any part of the website.
     const variantStyles = {
         defualtStyle: "text-white bg-orange hover:bg-transparent hover:border-2 hover:border-secondary hover:text-secondary focus:ring-4 focus:outline-none focus:ring-secondary font-medium rounded-4xl text-sm text-center dark:bg-secondary dark:hover:bg-transparent dark:hover:border-2 dark:hover:border-secondary dark:hover:text-secondary dark:focus:ring-secondary transition-colors duration-300 ease-in-out",
@@ -30,6 +31,7 @@ export default function Button({variantStyle = "defualtStyle", size = "medium", 
     const appliedSizeStyle = sizeStyle[size] || sizeStyle.medium; // Default to medium if size is not specified
   return (
     <button 
+        type={type}
         className={`${appliedVariantStyle} ${appliedSizeStyle}`}
         onClick={onClick}>
         {leftIcon && <span className="mr-2">{leftIcon}</span>}

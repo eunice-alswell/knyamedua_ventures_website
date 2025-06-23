@@ -1,6 +1,6 @@
 import CardComponent from "./CardComponent";
 import Footer from "./Footer";
-import Navbar from "./Header";
+import Navbar from "./Navbar";
 import { VisionMission } from "../utils/cardData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faHandshake, faHelmetSafety, faRankingStar, faMedal} from "@fortawesome/free-solid-svg-icons";

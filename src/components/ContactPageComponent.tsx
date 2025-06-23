@@ -1,11 +1,176 @@
-import Navbar from "./Header";
+import { useState } from "react";
+import Footer from "./Footer";
+import Header from "./Header";
+import Navbar from "./Navbar";
+import { contactHeader } from "../utils/headerData";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp, faInstagram, faTiktok } from "@fortawesome/free-brands-svg-icons";
+import Button from "./Button";
+
+
+interface EmailDetail {
+  recipientEmail: string;
+  recipientName: string;
+  senderName: string;
+  senderEmail: string;
+  senderPhone: string;
+  message: string;
+}
 
 export default function ContactPageComponent() {
+
+  const [emailDetail, setEmailDetail] = useState<EmailDetail>({
+    recipientEmail: "gyaualswell@gmail.com",
+    recipientName: "Kyamedua Ventures",
+    senderName: "",
+    senderEmail: "",
+    senderPhone: "",
+    message: ""
+  });
+
+  const handleDetailChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setEmailDetail((prevDetails) => ({
+      ...prevDetails,
+      [name]: value
+    }));
+  };
+
+  const handleSubmitForm = (e: React.FormEvent<HTMLFormElement> ) => {
+    e.preventDefault();
+    // Here you would typically send the email using an API or service like EmailJS
+    console.log("Email Details:", emailDetail);
+    // Reset form after submission
+    setEmailDetail({
+      recipientEmail: "gyaualswell@gmail.com",
+      recipientName: "Kyamedua Ventures",
+      senderName: "",
+      senderEmail: "",
+      senderPhone: "",
+      message: ""
+    });
+  };
   // This is a simple home page component that can be used in the in any part of the website.
   return (
     <div>
         <Navbar/>
-        <h1>Contact Us</h1>
+        <main >
+          <Header title={contactHeader.title} subtitle={contactHeader.subtitle} description={contactHeader.description}/>
+          <div className="max-w-screen-xl mx-auto px-4 py-8 lg:py-15">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Contact Information */}
+              <div>
+                <div className="flex items-center justify-center lg:justify-start gab-6">
+                  <hr className="w-20 border-1 border-secondary"/>
+                  <h1 className="text-lg font-normal text-primarycolor p-4 fadeInBottom">Reach Out</h1>
+                </div>
+                <p className="text-accent text-sm mb-4">We'd love to hear from you! Whether you have a question about our services, pricing, or anything else, our team is ready to answer all your questions.</p>
+                {/* Contact Addresses */}
+                <div>
+                  <h2 className="text-primarycolor text-lg font-semibold mb-2">Address</h2>
+                  <div className="flex space-x-4 mb-4">
+                    <div className="">
+                      <h2 className="text-primarycolor text-sm font-medium mb-2">Office 1</h2>
+                      <p className="text-accent text-sm">123 Main St, Anytown, USA</p>
+                    </div>
+                    <div className="border-l border-gray-300 pl-4">
+                      <h2 className="text-primarycolor text-sm font-medium mb-2">Office 2</h2>
+                      <p className="text-accent text-sm">456 Elm St, Anytown, USA</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex space-x-4 mb-4 border-t border-gray-300 pt-4">
+                  <div className="">
+                    <h2 className="text-primarycolor text-base font-medium mb-2">Phone</h2>
+                    <p className="text-accent text-sm">+233 54-456-7890</p>
+                  </div>
+                  <div className="border-l border-gray-300 pl-4">
+                    <h2 className="text-primarycolor text-base font-medium mb-2">Email Address</h2>
+                    <p className="text-accent text-sm">info@knyamedua.com</p>
+                  </div>
+                </div>
+                <div className="space-y-4 mb-4 border-t border-gray-300 pt-4">
+                  <h2 className="text-primarycolor text-base font-medium mb-2">Socials</h2>
+                  <ul className="flex flex-row items-center justify-center lg:justify-start space-x-5 text-lg text-secondary">
+                      <li className="">
+                          <a href="" target="_blank" className="hover:text-primarycolor transition-colors duration-300 ease-in-out">
+                              <FontAwesomeIcon icon={faWhatsapp} className=""/>
+                          </a>
+                      </li>
+                      <li className="">
+                          <a href="" target="_blank" className="hover:text-primarycolor transition-colors duration-300 ease-in-out">
+                              <FontAwesomeIcon icon={faInstagram} className=""/>
+                          </a>
+                      </li>
+                      <li className="">
+                          <a href="" target="_blank" className="hover:text-primarycolor transition-colors duration-300 ease-in-out">
+                              <FontAwesomeIcon icon={faTiktok} className=""/>
+                          </a>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+              {/* Contact Form */}
+              <div>
+                <form className="space-y-4" onSubmit={handleSubmitForm}>
+                  <h2 className="text-primarycolor text-2xl font-semibold mb-2">Send Us a Message</h2>
+                  <div className="space-y-2">
+                    <div className="space-y-2">
+                      <label className="block text-accent font-medium">Name <span className="text-red-500 pl-1">*</span></label>
+                      <input 
+                        type="text" 
+                        name="senderName"
+                        value={emailDetail.senderName}
+                        onChange={handleDetailChange}
+                        placeholder="eg. John Doe" 
+                        className=" w-full p-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-secondary transition-colors duration-300 ease-in-out"
+                        required
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="block text-accent font-medium">Email <span className="text-red-500 pl-1">*</span></label>
+                      <input 
+                        type="email" 
+                        name="senderEmail"
+                        value={emailDetail.senderEmail}
+                        onChange={handleDetailChange}
+                        placeholder="eg. yourname@example.com" 
+                        className=" w-full p-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-secondary transition-colors duration-300 ease-in-out"
+                        required
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="block text-accent font-medium">Phone <span className="text-red-500 pl-1">*</span></label>
+                      <input 
+                        type="tel" 
+                        name="senderPhone"
+                        value={emailDetail.senderPhone}
+                        onChange={handleDetailChange}
+                        placeholder="eg. 123-456-7890" 
+                        className=" w-full p-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-secondary transition-colors duration-300 ease-in-out"
+                        required
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="block text-accent font-medium">Message <span className="text-red-500 pl-1">*</span></label>
+                      <textarea
+                        name="message"
+                        value={emailDetail.message}
+                        onChange={handleDetailChange}
+                        placeholder="eg. Your message here..."
+                        className="w-full h-[150px] p-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-secondary transition-colors duration-300 ease-in-out"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <Button label="Submit" type="submit"  />
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </main>
+        <Footer/>
     </div>
   );
 }

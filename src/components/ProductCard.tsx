@@ -32,7 +32,7 @@ export default function ProductCard({ products = [],limit, }: { products?: Produ
                 }
                 <h1 className="text-lg font-semibol text-primarycolor">{product.name}</h1>
                 <p className= "text-xs p-4 text-accent">{product.description}</p>
-                <Button label="Go To Products" variantStyle="noBgStyle" rightIcon ={<FontAwesomeIcon icon={faArrowRightLong} className="hover:text-white" />} />
+                <Button label="Go To Product" variantStyle="noBgStyle" rightIcon ={<FontAwesomeIcon icon={faArrowRightLong} className="hover:text-white" />} />
             </div>
 
         ))}

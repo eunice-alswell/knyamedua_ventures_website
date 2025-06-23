@@ -1,7 +1,7 @@
 import Banner from "./Banner";
 import Button from "./Button";
 import CardComponent from "./CardComponent";
-import Navbar from "./Header";
+import Navbar from "./Navbar";
 import { cardDatails, serviceCardDetails } from "../utils/cardData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faHandshake, faHelmetSafety, faRankingStar, faTruckRampBox} from "@fortawesome/free-solid-svg-icons";
