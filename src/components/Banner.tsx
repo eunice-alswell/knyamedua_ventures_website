@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CountUp from "./CountUp";
 import { faBuildingCircleCheck } from "@fortawesome/free-solid-svg-icons/faBuildingCircleCheck";
 import { faBuildingFlag, faPeopleCarryBox, faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
+import { clientTelData } from "../utils/clientTelData";
 
 
 
@@ -15,18 +16,18 @@ export default function Banner() {
     const BannerData: BannerProps[] = [
         {
             icon: <FontAwesomeIcon icon={faBuildingCircleCheck} className="text-secondary text-3xl lg:text-4xl" />,
-            quantity: 7,
+            quantity: 10,
             text: "years of experience"
         },
         {
             icon: <FontAwesomeIcon icon={faPeopleGroup} className="text-secondary text-3xl lg:text-4xl" />,
-            quantity: 100,
+            quantity: clientTelData.length,
             text: "satisfied clients"
         },
         {
             icon: <FontAwesomeIcon icon={faBuildingFlag} className="text-secondary text-3xl lg:text-4xl" />,
-            quantity: 20,
-            text: "KNyamedua Offices"
+            quantity: 2,
+            text: "Nyamedua Grupp Offices"
         },
         {
             icon: <FontAwesomeIcon icon={faPeopleCarryBox} className="text-secondary text-3xl lg:text-4xl" />,

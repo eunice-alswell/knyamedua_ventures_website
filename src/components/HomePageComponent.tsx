@@ -8,44 +8,60 @@ import {faHandshake, faHelmetSafety, faRankingStar, faTruckRampBox} from "@forta
 import ProductCard from "./ProductCard";
 import { productData } from "../utils/productData";
 import Footer from "./Footer";
+import CTA from "./CTA";
+import type { CTAProps } from "./CTA";
+import ClientSlider from "./ClientSlider";
+import { useNavHandlers } from "../utils/navfunc";
+import Carousel from "./Carousel";
+
+const homeCTA: CTAProps = {
+  title: "Your Trusted Partner in LPG Solutions",
+  description: "Your Trusted Partner in LPG Solutions. We provide safe installations, reliable products, and expert support for businesses across Ghana’s energy sector.Let’s power your operations — safely and efficiently.",
+  buttonLabel: "Get a Free Quote",
+  buttonIcon: <FontAwesomeIcon icon={faHandshake} className="hover:text-white" />,
+};
 
 export default function HomePageComponent() {
+  const { handleServices,handleAboutUs,handleProducts } = useNavHandlers();
   // This is a simple home page component that can be used in the in any part of the website.
   return (
     <div>
         <Navbar/>
         <main className="min-h-screen font-primary overflow-x-hidden ">
           <div className="relative h-[200vh] lg:h-[130vh] w-full mb-10">
-            <div className="h-[100vh] w-full bg-[url('/LPG_worker.jpg')] bg-cover bg-center">
-              <div className="flex items-center justify-center lg:justify-start h-full w-full bg-primarycolor/70 ">
-                <div className="max-w-screen-7xl mx-auto text-white px-6 lg:px-30">
-                  <div className="w-full lg:w-2/4 text-center lg:text-left">
-                    <h1 className="text-4xl font-bold mb-4 fadeInBottom ">Reliable LPG Solutions for Safer, Smarter Energy Use</h1>
-                    <p className="text-lg mb-6 fadeInBottom">Your trusted partner in LPG commercial storage, heating systems, and industrial safety components — delivering excellence, durability, and innovation across Ghana’s oil and gas industry.</p>
-                    <div className="flex space-x-4 rtl:space-x-reverse justify-center lg:justify-start">
-                      <Button label="Explore Our Services"/>
-                      <Button label="Get a Free Quote" variantStyle="primarydefualtStyle"/>
+            {/* <div className="h-[100vh] w-full bg-[url('/nyamedua_img/NYAMEDUA_GRUPP_BANNER.png')] bg-cover bg-center">
+              <div className="flex items-center justify-center lg:justify-start h-full w-full bg-primarycolor/60 ">
+                <div className="max-w-screen-xl mx-auto text-white px-6">
+                  <div className="w-full lg:w-2/4 text-center lg:text-left space-y-8">
+                  <div className="w-full text-center space-y-8 lg:px-30">
+                    <h1 className="text-3xl lg:text-5xl font-bold fadeInBottom ">Reliable LPG Solutions for Safer, Smarter Energy Use</h1>
+                    <p className="text-base lg:text-xl fadeInBottom">Your trusted partner in LPG commercial storage, heating systems, and industrial safety components — delivering excellence, durability, and innovation across Ghana’s oil and gas industry.</p>
+                    <div className="flex flex-col lg:flex-row space-y-5 lg:space-y-0 lg:space-x-4 rtl:space-x-reverse justify-center lg:justify-start">
+                    <div className="flex flex-col lg:flex-row space-y-5 lg:space-y-0 lg:space-x-4 rtl:space-x-reverse justify-center">
+                      <Button label="Explore Our Services" onClick={handleServices}/>
+                      <Button label="Get a Free Quote" onClick={handleContactUs} variantStyle="primarydefualtStyle"/>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
+            <Carousel/>
             {/* ----card section---- */}
-            <div className="absolute left-1/2 bottom-[-80px] w-full z-10">
+            <div className="absolute left-1/2 bottom-[0.001%] lg:bottom-[1%] w-full z-10">
               <div className="max-w-screen-7xl mx-auto px-6 lg:px-30 transform -translate-x-1/2 fadeOnScroll">
-                <CardComponent cardDetails={cardDatails}/>
+                <CardComponent cardDetails={cardDatails} OnClick={handleAboutUs}/>
               </div>
             </div>
           </div>
           {/* ----About section---- */}
           <div className="w-full">
             <div className="max-w-screen-xl mx-auto px-6 py-5">
-              <div className="flex flex-wrap lg:flex-nowrap items-center justify-between gap-10 mb-10 min-h-[90vh]">
+              <div className="flex flex-wrap lg:flex-nowrap items-center justify-between gap-10 space-y-10 lg:space-y-0 lg:pb-20">
                 {/* SVG Section */}
-                <div className="flex items-center justify-center w-1/2 h-full">
-                  <div className="relative w-[300px] h-[300px] lg:w-[460px] lg:h-[480px]">
+                <div className="flex items-center justify-center w-1/2 h-full ">
+                  <div className="relative w-[300px] h-[260px] lg:w-[460px] lg:h-[480px]">
                     <svg
-                      className="absolute top-0 left-0 w-[370px] h-[350px] lg:w-[450px] lg:h-[460px]"
+                      className="absolute top-0 left-0 w-[330px] h-[310px] lg:w-[450px] lg:h-[460px]"
                       height="460"
                       width="450"
                       fill="none"
@@ -59,16 +75,16 @@ export default function HomePageComponent() {
                     </svg>
 
                     <svg
-                      className="absolute top-0 left-0 w-[370px] h-[350px] lg:w-[470px] lg:h-[480px]"
+                      className="absolute top-0 left-0 w-[330px] h-[310px] lg:w-[470px] lg:h-[480px]"
                       height="480"
                       width="470"
                       viewBox="0 0 3252 3070"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <defs>
-                        <pattern id="imgPattern" patternUnits="userSpaceOnUse" width="3252" height="3070">
+                        <pattern id="imgPattern6" patternUnits="userSpaceOnUse" width="3252" height="3070">
                           <image
-                            href="/LPG_worker.jpg"
+                            href="/nyamedua_img/MR_KEEGAN_BAIDOO_CEO.jpeg"
                             x="0"
                             y="0"
                             width="3252"
@@ -79,7 +95,7 @@ export default function HomePageComponent() {
                       </defs>
                       <path
                         d="M2101.66 6.8135C2344.89 44.3319 2570.72 171.344 2740 339.413C2905.26 503.493 2958.2 733.262 3045.28 943.693C3130.95 1150.69 3241.4 1350.83 3250.39 1572.72C3259.74 1803.72 3230.86 2047.79 3097.88 2242.41C2966.4 2434.83 2712.51 2507.9 2517.65 2645.09C2317.21 2786.22 2175.3 3035.92 1926.86 3066.9C1677.31 3098.02 1471.52 2886.68 1235.31 2805.01C1015.59 2729.05 750.115 2747.97 576.897 2600.16C403.751 2452.41 393.239 2205.21 297.567 2004.83C199 1798.37 16.3751 1620.74 1.49544 1394.96C-13.713 1164.19 89.1861 939.002 214.193 739.738C337.803 542.7 503.225 363.257 717.293 253.963C923.99 148.433 1171.24 174.356 1402.42 133.083C1638.55 90.9263 1864.47 -29.7745 2101.66 6.8135Z"
-                        fill="url(#imgPattern)"
+                        fill="url(#imgPattern6)"
                       />
                     </svg>
                   </div>
@@ -100,7 +116,7 @@ export default function HomePageComponent() {
                       Our mission is to deliver high-quality LPG products and services that meet the highest standards of safety and compliance. We pride ourselves on our expertise, innovation, and dedication to customer satisfaction.
                     </p>
                     <div className="flex justify-center lg:justify-start fadeInBottom">
-                      <Button label="More About Us" size="large"/>
+                      <Button label="More About Us" size="large" onClick={handleAboutUs}/>
                     </div>
                   </div>
                 </div>
@@ -121,9 +137,9 @@ export default function HomePageComponent() {
               </div>
               <div className="flex flex-wrap lg:flex-nowrap items-start justify-center lg:justify-evenly">
                 <h2 className="lg:w-2/4 text-3xl lg:text-4xl text-primarycolor font-semibold pb-5">What Services we offer</h2>
-                <p className=" lg:w-2/4 text-sm text-accent pb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dolore ex saepe culpa officiis eveniet, ea odio laboriosam nam. Provident!</p>
+                <p className=" lg:w-2/4 text-sm text-accent pb-5">We offer expert LPG solutions tailored to meet the needs of commercial and industrial clients. From installation to maintenance, our services prioritize safety, efficiency, and compliance.</p>
                 <div className="lg:w-60 flex justify-center lg:justify-end" >
-                  <Button label="All Services" size="large"/>
+                  <Button label="All Services" size="large" onClick={handleServices}/>
                 </div>
               </div>
               <div className="w-full pt-10">
@@ -140,7 +156,7 @@ export default function HomePageComponent() {
                 <div className="flex items-center justify-center  h-full lg:order-2">
                   <div className="relative w-[300px] h-[300px] lg:w-[460px] lg:h-[480px] ">
                     <svg
-                      className="absolute top-0 left-0 w-[360px] h-[340px] lg:w-[450px] lg:h-[460px]"
+                      className="absolute top-0 left-0  w-[330px] h-[310px] lg:w-[450px] lg:h-[460px]"
                       height="460"
                       width="450"
                       fill="none"
@@ -154,16 +170,16 @@ export default function HomePageComponent() {
                     </svg>
 
                     <svg
-                      className="absolute top-0 left-0 w-[370px] h-[350px] lg:w-[470px] lg:h-[480px]"
+                      className="absolute top-0 left-0 w-[330px] h-[310px] lg:w-[470px] lg:h-[480px]"
                       height="480"
                       width="470"
                       viewBox="0 0 3252 3070"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <defs>
-                        <pattern id="imgPattern" patternUnits="userSpaceOnUse" width="3252" height="3070">
+                        <pattern id="imgPattern7" patternUnits="userSpaceOnUse" width="3252" height="3070">
                           <image
-                            href="/LPG_worker.jpg"
+                            href="/serviceman-hired-condenser-checkup.jpg"
                             x="0"
                             y="0"
                             width="3252"
@@ -174,11 +190,12 @@ export default function HomePageComponent() {
                       </defs>
                       <path
                         d="M2101.66 6.8135C2344.89 44.3319 2570.72 171.344 2740 339.413C2905.26 503.493 2958.2 733.262 3045.28 943.693C3130.95 1150.69 3241.4 1350.83 3250.39 1572.72C3259.74 1803.72 3230.86 2047.79 3097.88 2242.41C2966.4 2434.83 2712.51 2507.9 2517.65 2645.09C2317.21 2786.22 2175.3 3035.92 1926.86 3066.9C1677.31 3098.02 1471.52 2886.68 1235.31 2805.01C1015.59 2729.05 750.115 2747.97 576.897 2600.16C403.751 2452.41 393.239 2205.21 297.567 2004.83C199 1798.37 16.3751 1620.74 1.49544 1394.96C-13.713 1164.19 89.1861 939.002 214.193 739.738C337.803 542.7 503.225 363.257 717.293 253.963C923.99 148.433 1171.24 174.356 1402.42 133.083C1638.55 90.9263 1864.47 -29.7745 2101.66 6.8135Z"
-                        fill="url(#imgPattern)"
+                        fill="url(#imgPattern7)"
                       />
                     </svg>
                   </div>
                 </div>
+                {/* Text Section */}
                 <div className="flex items-center">
                   <div>
                     <div className="flex items-center justify-center lg:justify-start gab-6">
@@ -197,7 +214,7 @@ export default function HomePageComponent() {
                           <FontAwesomeIcon icon={faHelmetSafety} className="text-secondary mr-3 text-4xl" />
                           <h2 className="text-lg text-primarycolor font-medium ">Certified Expertise & End-to-End Service</h2>
                         </div>
-                          <p className="text-accent text-sm">From installation to maintenance, our trained professionals deliver safe, compliant, and reliable energy solutions tailored to your needs.</p>
+                          <p className="text-accent text-sm">We partner with Ghana Atomic Energy to certify all gas pipes installations and works.</p>
                       </li>
                       <li className="inline-block text-base pb-6 fadeInBottom">
                         <div className="flex items-center justify-start pb-2">
@@ -240,14 +257,20 @@ export default function HomePageComponent() {
                     <p className="text-sm pb-5 lg:px-50">We supply industry-tested and certified LPG equipment that meets the highest safety and efficiency standards. Our products are designed to support safe energy usage across homes, businesses, and industries.</p>
                   </div>
                   <div className="w-full pt-5">
-                    <ProductCard products={productData} limit={3} />
+                    <ProductCard products={productData} limit={3} onclick={handleProducts}/>
                   </div>
                   <div className="flex justify-center" >
-                    <Button label="View More Products" size="large"/>
+                    <Button label="View More Products" onClick={handleProducts} size="large"/>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+          <div>
+            <CTA title={homeCTA.title} description={homeCTA.description} buttonLabel={homeCTA.buttonLabel}/>
+          </div>
+          <div>
+            <ClientSlider/>
           </div>
           
         </main>

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import Button from './Button';
+import { useNavHandlers } from "../utils/navfunc";
 
 interface navlinks {
   name: string;
@@ -9,6 +10,7 @@ interface navlinks {
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const { handleContactUs} = useNavHandlers();
 
   const navigationLinks: navlinks[] = [
     { name: 'Home', path: '/' },
@@ -26,11 +28,11 @@ export default function Navbar() {
     <nav className="bg-white fixed w-full z-10 top-0 start-0 border-b border-gray-200 font-primary font-bold">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="/KNYAMEDUA _LOGO.png" className="h-8" alt="KNyamedua Logo" />
+          <img src="/nyamedua_img/nyamedua_grupp_logo.png" className="h-8" alt="Nyamedua Grupp Logo" />
         </Link>
 
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <Button label="Contact Us" />
+          <Button label="Contact Us" onClick={handleContactUs} />
           <button
             onClick={toggleMenu}
             type="button"

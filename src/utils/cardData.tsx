@@ -4,7 +4,7 @@ import type { CardProps } from "../components/CardComponent";
 
 export const cardDatails: CardProps[] = [
         {
-            title:"Safe Energy Solutions",
+            title:"Safe Energy Solutions, LPG systems & Pipping installation",
             description:" We specialize in delivering LPG systems and products that prioritize safety, compliance, and reliability for industrial and commercial use.",
             CTA: "Read more",
             icon: <FontAwesomeIcon icon={faBuildingShield} />

@@ -6,6 +6,7 @@
   --color-secondary: #BE4204;
   --color-accent: #515670;
   --font-primary: 'Poppins', 'sans-serif';
+  --breakpoint-xs: 375px;
 }
 
 

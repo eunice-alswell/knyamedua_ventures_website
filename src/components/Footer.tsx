@@ -4,8 +4,11 @@ import { Link } from "react-router-dom";
 import Button from "./Button";
 // import { faClock } from "@fortawesome/free-solid-svg-icons/faClock";
 import { faBox, faClockFour, faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { useNavHandlers } from "../utils/navfunc";
 
 export default function Footer() {
+    const { handleContactUs } = useNavHandlers();
+
   return (
     <footer className="bg-primarycolor text-white py-6">
         <div className="max-w-screen-xl mx-auto px-4 mt-10">
@@ -29,8 +32,8 @@ export default function Footer() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-8 text-center lg:text-left">
                 <div>
                     <div className="flex items-center justify-center lg:justify-start space-x-3 rtl:space-x-reverse mb-4">
-                        <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                            <img src="/KNYAMEDUA _LOGO.png" className="h-16" alt="KNyamedua Logo" />
+                        <Link to="/" className="flex items-center bg-white space-x-3 rtl:space-x-reverse">
+                            <img src="/nyamedua_img/nyamedua_grupp_logo.png" className="h-16" alt="KNyamedua Logo" />
                         </Link>
                     </div>
                     <p className="text-sm font-light mb-4 text-center lg:text-left">We are expert provider of LPG systems and products in Ghana, specializing in safe, efficient, and reliable energy solutions for industrial and commercial applications.</p>
@@ -68,34 +71,36 @@ export default function Footer() {
                     <h2 className="w-50 lg:w-2/3 text-lg font-semibold mb-2 border-b-2 border-secondary">Contact Information</h2>
                     <ul className="space-y-3 mt-4 w-50 lg:w-2/3">
                         <li>
-                            <a href="tel:+233 24 123 4567" className="hover:text-secondary transition-colors duration-300 ease-in-out">
+                            <a href="tel:+233 55 0994 6300" className="hover:text-secondary transition-colors duration-300 ease-in-out">
                                 <span className="mr-2">
                                     <FontAwesomeIcon icon={faPhone} className="bg-transparent text-secondary"/>
                                 </span>
-                                +233 24 123 4567
+                                +233 55 0994 6300
                             </a>
                         </li>
                         <li>
-                            <a href="mailto:example@gail.com" className="hover:text-secondary transition-colors duration-300 ease-in-out">
-                                <span className="mr-2"><FontAwesomeIcon icon={faEnvelope} className="bg-transparent text-secondary"/></span>
-                                example@gmail.com
+                            <a href="mailto:info@nyameduagrupp.com" className="hover:text-secondary transition-colors duration-300 ease-in-out">
+                                <span className="mr-2">
+                                    <FontAwesomeIcon icon={faEnvelope} className="bg-transparent text-secondary"/>
+                                </span>
+                                info@nyameduagrupp.com
                             </a>
                         </li>
                         <li className="hover:text-secondary transition-colors duration-300 ease-in-out">
                             <span className="mr-2"><FontAwesomeIcon icon={faLocationDot} className="bg-transparent text-secondary"/></span>
-                            Accra, Ghana
+                            GHACEM Flat, Sakumono - Estate, Ghana
                         </li>
                         <li className="hover:text-secondary transition-colors duration-300 ease-in-out">
                             <span className="mr-2"><FontAwesomeIcon icon={faBox} className="bg-transparent text-secondary"/></span>
-                            P.O. Box 1234
+                            P.O. Box SK 935, Sakumono - Estate, Tema
                         </li>
                     </ul>
                 </div>
-                <div className="flexitems-center lg:justify-start space-y-3 rtl:space-y-reverse">
-                    <h2 className="w-30 lg:w-full text-lg font-semibold mb-2 border-b-2 border-secondary">Work Hours</h2>
+                <div className="flex flex-col items-center lg:justify-start space-y-3 rtl:space-y-reverse">
+                    <h2 className="w-50 lg:w-2/3 text-lg font-semibold mb-2 border-b-2 border-secondary">Work Hours</h2>
                     <p className="text-base my-4"><span className="mr-2"><FontAwesomeIcon icon={faClockFour} className="bg-transparent text-secondary"/></span>Monday - Friday: 8:00 AM - 5:00 PM</p>
                     <p className="text-sm mb-4 font-light">We are available to assist you during our working hours. Reach out for any inquiries or support.</p>
-                    <Button label="Get In Touch " />        
+                    <Button label="Get In Touch" onClick={handleContactUs} />        
                 </div>
             </div>
             <hr className="my-6"/>
