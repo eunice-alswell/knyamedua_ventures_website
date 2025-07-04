@@ -49,9 +49,9 @@ export default function ClientSlider() {
         <div>
             <div className="flex items-center justify-center gab-6">
                 <hr className="w-20 border-1 border-secondary"/>
-                <h1 className="text-lg font-normal p-4 fadeInBottom">Our clients</h1>
+                <h1 className="text-lg font-normal p-4 fadeInBottom">Clients</h1>
             </div>
-            <h2 className="text-2xl font-bold text-center">Who We've Worked for</h2>
+            <h2 className="text-2xl font-bold text-center">Our Trusted Clients</h2>
         </div>
       <Slider {...settings} className="px-6 lg:px-30">
         {clientTelData.filter(client => client.company_logo !== "logo_url").map((client, index) => (

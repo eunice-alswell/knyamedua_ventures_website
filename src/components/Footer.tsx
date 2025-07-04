@@ -40,7 +40,7 @@ export default function Footer() {
                     <div>
                         <ul className="flex flex-row items-center justify-center lg:justify-start space-x-5 mt-4 text-xl text-white">
                             <li className="">
-                                <a href="" target="_blank" className="hover:text-secondary transition-colors duration-300 ease-in-out">
+                                <a href="https://wa.me/243516220" target="_blank" className="hover:text-secondary transition-colors duration-300 ease-in-out">
                                     <FontAwesomeIcon icon={faWhatsapp} className="bg-secondary hover:bg-transparent p-2 rounded-[100%]"/>
                                 </a>
                             </li>
@@ -106,7 +106,7 @@ export default function Footer() {
             <hr className="my-6"/>
             <div className="flex flex-wrap lg:flex-nowrap items-center justify-center lg:justify-between space-y-2 ">
                 <p className="text-xs">Designed by <a href="" className="text-white underline">Altynova Technoliges</a></p>
-                <p className="text-sm">© {new Date().getFullYear()} K. Nyamedua Valley Ventures. All rights reserved.</p>
+                <p className="text-sm">© {new Date().getFullYear()} Nyamedua Grupp. All rights reserved.</p>
             </div>
         </div>  
     </footer>

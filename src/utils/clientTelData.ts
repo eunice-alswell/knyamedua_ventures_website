@@ -2,7 +2,7 @@ import type { clientdata } from '../components/ClientSlider';
 
 export const clientTelData:clientdata[] = [
   {
-    "company_logo": "logo_url",
+    "company_logo": "/nyamedua_img/nyamedua_clients_logos/melcom_logo.png",
     "company_name": "Melcom Group of Companies",
     "location": "Nationwide"
   },

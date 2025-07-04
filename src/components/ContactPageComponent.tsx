@@ -23,7 +23,7 @@ export interface EmailDetail {
 export default function ContactPageComponent() {
 
   const [emailDetail, setEmailDetail] = useState<EmailDetail>({
-    recipientEmail: "gyaualswell@gmail.com",
+    recipientEmail: "helenaffo23@gmail.com",
     recipientName: "Nyamedua Grupp",
     subject: "",
     senderName: "",

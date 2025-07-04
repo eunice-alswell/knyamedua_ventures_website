@@ -35,7 +35,7 @@ const heroSlides: SlideData[] = [
   },
   {
     id: 4,
-    backgroundImage: "/nyamedua_img/2_IN_1_COOKSTOVE_2.jpeg",
+    backgroundImage: "/nyamedua_img/4_IN_1_COOKSTOVE.png",
     title: "Advanced LPG Cooking Solutions for Commercial Kitchens",
     subtitle:
       "Elevate your culinary operations with our high-performance LPG cookstoves, designed for efficiency, safety, and exceptional cooking results.",
