@@ -28,10 +28,17 @@ const heroSlides: SlideData[] = [
   },
   {
     id: 3,
-    backgroundImage: "/nyamedua_img/GAUGE_3.jpg",
+    backgroundImage: "/nyamedua_img/liquid_guages.jpg",
     title: "Your Trusted Source for Industrial LPG Products and Equipment",
     subtitle:
       "Discover top-quality grills, stoves, regulators, gauges, and safety devices—engineered for efficiency, safety, and reliability in demanding environments.",
+  },
+  {
+    id: 4,
+    backgroundImage: "/nyamedua_img/2_IN_1_COOKSTOVE_2.jpeg",
+    title: "Advanced LPG Cooking Solutions for Commercial Kitchens",
+    subtitle:
+      "Elevate your culinary operations with our high-performance LPG cookstoves, designed for efficiency, safety, and exceptional cooking results.",
   },
 ];
 

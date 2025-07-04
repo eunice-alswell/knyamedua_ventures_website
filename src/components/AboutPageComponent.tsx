@@ -1,4 +1,5 @@
 import CardComponent from "./CardComponent";
+import { Helmet } from "react-helmet-async";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { VisionMission } from "../utils/cardData";
@@ -23,7 +24,18 @@ const aboutCTA: CTAProps = {
 export default function AboutPageComponent() {
   // This is a simple home page component that can be used in the in any part of the website.
   return (
-    <div>
+    <>
+        <Helmet>
+          <title>About Us | Nyamedua Grupp</title>
+          <meta name="description" content="Learn more about Nyamedua Grupp — your trusted partner in LPG systems, industrial safety, and energy solutions across Ghana." />
+          <meta name="keywords" content="LPG Ghana, LPG Installations, Industrial Safety, Nyamedua Grupp, Gas Solutions, Ghana Energy" />
+          <meta property="og:title" content="About Us | Nyamedua Grupp" />
+          <meta property="og:description" content="We deliver reliable LPG services, certified installations, and safety-first solutions tailored to Ghana's industries." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://www.nyameduagrupp.com/about" />
+          <meta property="og:image" content="https://www.nyameduagrupp.com/nyamedua_img/nyamedua_grupp_logo.png" />
+          <link rel="canonical" href="https://www.nyameduagrupp.com/about" />
+        </Helmet>
         <Navbar/>
         <main className="font-primary space-y-20">
           {/* header section */}
@@ -132,7 +144,7 @@ export default function AboutPageComponent() {
                       <defs>
                         <pattern id="imgPattern2" patternUnits="userSpaceOnUse" width="3252" height="3070">
                           <image
-                            href="/LPG_Maintainance_worker.jpg"
+                            href="/nyamedua_img/installation_nyamedua_grupp_2.jpeg"
                             x="0"
                             y="0"
                             width="3252"
@@ -333,6 +345,6 @@ export default function AboutPageComponent() {
 
         </main>
         <Footer/>
-    </div>
+    </>
   );
 }

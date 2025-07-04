@@ -13,6 +13,7 @@ import type { CTAProps } from "./CTA";
 import ClientSlider from "./ClientSlider";
 import { useNavHandlers } from "../utils/navfunc";
 import Carousel from "./Carousel";
+import { Helmet } from "react-helmet-async";
 
 const homeCTA: CTAProps = {
   title: "Your Trusted Partner in LPG Solutions",
@@ -25,7 +26,19 @@ export default function HomePageComponent() {
   const { handleServices,handleAboutUs,handleProducts } = useNavHandlers();
   // This is a simple home page component that can be used in the in any part of the website.
   return (
-    <div>
+    <>
+        <Helmet>
+          <title>Home | Nyamedua Grupp</title>
+          <meta name="description" content="Reliable LPG storage, heating systems, and safety products designed for Ghana's energy and industrial sectors." />
+          <meta name="keywords" content="LPG Ghana, Commercial LPG, Industrial Heating, Nyamedua Ventures, Gas Storage, Safety Systems, commercial cooking solutions" />
+          <meta property="og:title" content="Home | Nyamedua Grupp" />
+          <meta property="og:description" content="Trusted LPG solutions partner for safe, efficient energy in Ghana." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://www.nyameduagrupp.com" />
+          <meta property="og:image" content="https://www.nyameduagrupp.com/nyamedua_img/nyamedua_grupp_logo.png" />
+          <link rel="canonical" href="https://www.nyameduagrupp.com" />
+        </Helmet>
+
         <Navbar/>
         <main className="min-h-screen font-primary overflow-x-hidden ">
           <div className="relative h-[200vh] lg:h-[130vh] w-full mb-10">
@@ -84,7 +97,7 @@ export default function HomePageComponent() {
                       <defs>
                         <pattern id="imgPattern6" patternUnits="userSpaceOnUse" width="3252" height="3070">
                           <image
-                            href="/nyamedua_img/MR_KEEGAN_BAIDOO_CEO.jpeg"
+                            href="/nyamedua_img/nyamedua_ceo_tanks.jpeg"
                             x="0"
                             y="0"
                             width="3252"
@@ -257,7 +270,7 @@ export default function HomePageComponent() {
                     <p className="text-sm pb-5 lg:px-50">We supply industry-tested and certified LPG equipment that meets the highest safety and efficiency standards. Our products are designed to support safe energy usage across homes, businesses, and industries.</p>
                   </div>
                   <div className="w-full pt-5">
-                    <ProductCard products={productData} limit={3} onclick={handleProducts}/>
+                    <ProductCard products={productData} limit={3}/>
                   </div>
                   <div className="flex justify-center" >
                     <Button label="View More Products" onClick={handleProducts} size="large"/>
@@ -276,6 +289,6 @@ export default function HomePageComponent() {
         </main>
         {/* Footer section */}
         <Footer/>
-    </div>
+    </>
   );
 }

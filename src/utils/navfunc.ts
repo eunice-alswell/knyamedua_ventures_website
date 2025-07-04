@@ -39,6 +39,7 @@ export const useNavHandlers = () => {
         }
     };
 
+
     return { handleContactUs, handleServices, handleProducts, handleAboutUs};
 };
 

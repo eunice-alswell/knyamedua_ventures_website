@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Footer from "./Footer";
 import Header from "./Header";
 import Navbar from "./Navbar";
@@ -66,7 +67,19 @@ export default function ContactPageComponent() {
   };
   // This is a simple home page component that can be used in the in any part of the website.
   return (
-    <div>
+    <>
+        <Helmet>
+          <title>Contact Us | Nyamedua Grupp</title>
+          <meta name="description" content="Have questions or need assistance with our LPG services? Reach out to Nyamedua Grupp — we’re here to help." />
+          <meta name="keywords" content="Contact Nyamedua, LPG Support Ghana, Customer Service, Gas Installation Enquiry" />
+          <meta property="og:title" content="Contact Us | Nyamedua Grupp" />
+          <meta property="og:description" content="Get in touch with our team for inquiries, support, or service requests." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://www.nyameduagrupp.com/contact" />
+          <meta property="og:image" content="https://www.nyameduagrupp.com/nyamedua_img/nyamedua_grupp_logo.png" />
+          <link rel="canonical" href="https://www.nyameduagrupp.com/contact" />
+        </Helmet>
+
         <Navbar/>
         <main >
           <Header title={contactHeader.title} subtitle={contactHeader.subtitle} description={contactHeader.description}/>
@@ -201,6 +214,6 @@ export default function ContactPageComponent() {
 
         </main>
         <Footer/>
-    </div>
+    </>
   );
 }

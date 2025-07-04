@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Footer from "./Footer";
 import Header from "./Header";
 import Navbar from "./Navbar";
@@ -59,7 +60,19 @@ export default function ServicePageComponent() {
 
   // This is a simple home page component that can be used in the in any part of the website.
   return (
-    <div>
+    <>
+        <Helmet>
+          <title>Our Services | Nyamedua Grupp</title>
+          <meta name="description" content="Discover our LPG installation, heating systems setup, maintenance, and industrial safety services — tailored for businesses in Ghana." />
+          <meta name="keywords" content="LPG Services, Tank Installation Ghana, Industrial Heating Systems, Gas System Maintenance, Nyamedua Grupp" />
+          <meta property="og:title" content="Our Services | Nyamedua Grupp" />
+          <meta property="og:description" content="End-to-end LPG and safety services including installation, inspection, and system optimization." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://www.nyameduagrupp.com/services" />
+          <meta property="og:image" content="https://www.nyameduagrupp.com/nyamedua_img/nyamedua_grupp_logo.png" />
+          <link rel="canonical" href="https://www.nyameduagrupp.com/services" />
+        </Helmet>
+
         <Navbar/>
         <main>
             <Header title={serviceHeader.title} subtitle={serviceHeader.subtitle} description={serviceHeader.description}/>
@@ -138,6 +151,6 @@ export default function ServicePageComponent() {
             </div>        
         </main>
         <Footer/>
-    </div>
+    </>
   );
 }

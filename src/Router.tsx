@@ -13,6 +13,15 @@ const RouterCom = () => {
                 {Pages &&
                     Object.entries(Pages).map(([name, Page]) => {
                         if (name === "Home") return null; // skip Home
+                        if (name === "ProductCatalog") {
+                            return(
+                                <Route
+                                    key={name}
+                                    path='/products/:productSlug'
+                                    element={<Pages.ProductCatalog/>}
+                                />
+                            )
+                        }
 
                         return (
                             <Route
