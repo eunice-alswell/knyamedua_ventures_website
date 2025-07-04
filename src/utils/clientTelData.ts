@@ -57,7 +57,7 @@ export const clientTelData:clientdata[] = [
     "location": "Accra"
   },
   {
-    "company_logo": "public/nyamedua_img/nyamedua_clients_logos/ibis_style_hotel.jpg",
+    "company_logo": "/nyamedua_img/nyamedua_clients_logos/ibis_style_hotel.jpg",
     "company_name": "Ibis Style Hotel",
     "location": "Accra"
   },
