@@ -46,17 +46,17 @@ export default function ContactPageComponent() {
     SendEmail({
       emailDetail,
       onSuccess: () => {
-        console.log("Email sent successfully!");
+        alert("Email sent successfully!");
       },
       onError: () => {
-        console.error("Failed to send email:");
+        alert("Failed to send email. Please try again later."); 
       }
     });
     // Here you would typically send the email using an API or service like EmailJS
     console.log("Email Details:", emailDetail);
     // Reset form after submission
     setEmailDetail({
-      recipientEmail: "gyaualswell@gmail.com",
+      recipientEmail: "info@nyameduagrupp.com",
       recipientName: "Nyamedua Grupp",
       subject: "",
       senderName: "",
@@ -211,7 +211,6 @@ export default function ContactPageComponent() {
               </div>
             </div>
           </div>
-
         </main>
         <Footer/>
     </>

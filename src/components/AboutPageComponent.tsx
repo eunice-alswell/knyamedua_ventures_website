@@ -14,8 +14,8 @@ import Header from "./Header"
 import {aboutHeader} from "../utils/headerData"
 
 const aboutCTA: CTAProps = {
-  title: "Partner with Us for Safe and Efficient LPG Solutions",
-  description: "Join Nyamedua Grupp in delivering responsible energy solutions that serve people and protect the planet. Our expertise in commercial LPG systems ensures your business operates safely and efficiently.",
+  title: "Partner with Us for Safe and Efficient LPG Solutions and industrial cookstoves",
+  description: "Join Nyamedua Grupp in delivering responsible energy solutions that serve people and protect the planet. Our expertise in commercial LPG systems and industrial cookstove ensures your business operates safely and efficiently.",
   buttonLabel: "Contact Us",
   buttonIcon: <FontAwesomeIcon icon={faPhone} className="hover:text-white" />,
 };
@@ -97,7 +97,7 @@ export default function AboutPageComponent() {
                       Nyamedua Grupp is an indigenous Ghanaian firm in the oil and gas industry, committed to delivering responsible and efficient energy solutions that serve people and protect the planet. Our expertise spans the design, installation, and supply of commercial LPG systems and accessories tailored to the unique needs of commercial and industrial clients.
                     </p>
                     <p className="text-base text-accent mb-6 fadeInBottom">
-                      With a reputation built on trust, safety, and technical excellence, we serve businesses across Ghana by offering high-quality LPG products, certified installations, and dependable after-sales support. We believe in building lasting relationships with our clients by consistently delivering value, reliability, and peace of mind.
+                      With a reputation built on trust, safety, and technical excellence, we serve businesses across Ghana by offering high-quality LPG products, certified installations,industrial cookstove and dependable after-sales support. We believe in building lasting relationships with our clients by consistently delivering value, reliability, and peace of mind.
                     </p>
                     {/* <div className="flex justify-center lg:justify-start fadeInBottom">
                       <Button label="More About Us" size="large"/>
@@ -228,7 +228,7 @@ export default function AboutPageComponent() {
                       <h1 className="text-xl font-normal text-primarycolor p-4 fadeInBottom">Why Choose Us</h1>
                     </div>
                     <p className="text-base text-accent mb-6 fadeInBottom">
-                      Trusted across Ghana, we combine expert service, certified products, reliable support, and great value to deliver complete, worry-free LPG solutions.
+                      Trusted across Ghana, we combine expert service, certified products, reliable support, and great value to deliver complete, worry-free LPG solutions and industrial cookstove.
                     </p>
                     <ul className="text-primarycolor text-base space-y-4">
                       <li className="fadeInBottom">

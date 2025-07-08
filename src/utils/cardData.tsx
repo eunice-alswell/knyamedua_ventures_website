@@ -47,7 +47,7 @@ export const serviceCardDetails: CardProps[] = [
 export const VisionMission: CardProps[] = [
     {
         title:"Our Mission",
-        description:" To deliver safe, reliable, and cost-effective LPG infrastructure and solutions that power industries, businesses, and homes across Ghana—while prioritizing customer satisfaction, safety, and sustainability.",
+        description:" To deliver safe, reliable, and cost-effective LPG infrastructure, industrial cookstove and solutions that power industries, businesses, and homes across Ghana—while prioritizing customer satisfaction, safety, and sustainability.",
         // CTA: "Read more",
         icon: <FontAwesomeIcon icon={faArrowsToCircle} />
     },

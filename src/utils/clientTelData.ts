@@ -42,7 +42,7 @@ export const clientTelData:clientdata[] = [
     "location": "Accra"
   },
   {
-    "company_logo": "logo_url",
+    "company_logo": "/nyamedua_img/nyamedua_clients_logos/kasapreko_logo.png",
     "company_name": "Kasapreko Company Ltd",
     "location": "Spintex, Accra"
   },
@@ -87,7 +87,12 @@ export const clientTelData:clientdata[] = [
     "location": "Ghana"
   },
   {
-    "company_logo": "logo_url",
+    "company_logo": "/nyamedua_img/nyamedua_clients_logos/American_Embassy_logo.jpeg",
+    "company_name": "American Embassy",
+    "location": "Ghana"
+  },
+  {
+    "company_logo": "/nyamedua_img/nyamedua_clients_logos/pzc_logo.webp",
     "company_name": "PZ Cussons",
     "location": "Tema"
   },
