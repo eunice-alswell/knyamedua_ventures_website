@@ -75,7 +75,7 @@ export default function Footer() {
                                 <span className="mr-2">
                                     <FontAwesomeIcon icon={faPhone} className="bg-transparent text-secondary"/>
                                 </span>
-                                +233 55 0994 6300
+                                0509946300
                             </a>
                         </li>
                         <li>

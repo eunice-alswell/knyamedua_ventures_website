@@ -13,8 +13,8 @@ import type{ EmailDetail } from "../components/ContactPageComponent";
 
 interface SendEmailProps {
     emailDetail: EmailDetail;
-    onSuccess: () => void;
-    onError: () => void;
+    onSuccess?: () => void;
+    onError?: () => void;
 }
 
 const SendEmail = async ({ emailDetail, onSuccess, onError }: SendEmailProps) => {
@@ -34,10 +34,10 @@ const SendEmail = async ({ emailDetail, onSuccess, onError }: SendEmailProps) =>
             }
         );
         console.log("Email sent successfully", response.status, response.text);
-        onSuccess();
+        onSuccess?.();
     } catch (error) {
         console.log("Email failed to send", error);
-        onError();
+        onError?.();
     }
 };
 

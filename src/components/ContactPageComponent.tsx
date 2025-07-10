@@ -32,38 +32,61 @@ export default function ContactPageComponent() {
     message: ""
   });
 
+  const [errors, setErrors] = useState<Partial<EmailDetail>>({});
+  const [submitted, setSubmitted] = useState(false);
+
+  const validateForm = () => {
+    const newErrors: Partial<EmailDetail> = {};
+    if (!emailDetail.subject.trim()) newErrors.subject = "Subject is required";
+    if (!emailDetail.senderName.trim()) newErrors.senderName = "Name is required";
+    if (!emailDetail.senderEmail.trim()) {
+      newErrors.senderEmail = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(emailDetail.senderEmail)) {
+      newErrors.senderEmail = "Email is invalid";
+    };
+    if (!emailDetail.senderPhone) newErrors.senderPhone = "Phone number is required";
+    if (!emailDetail.message) newErrors.message = "Message is required";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+
   const handleDetailChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setEmailDetail((prevDetails) => ({
       ...prevDetails,
       [name]: value
     }));
+    setErrors({...errors, [name]: "" }); // Clear error for the field being edited
   };
 
   const handleSubmitForm = (e: React.FormEvent<HTMLFormElement> ) => {
     e.preventDefault();
-
-    SendEmail({
-      emailDetail,
-      onSuccess: () => {
-        alert("Email sent successfully!");
-      },
-      onError: () => {
-        alert("Failed to send email. Please try again later."); 
-      }
-    });
-    // Here you would typically send the email using an API or service like EmailJS
-    console.log("Email Details:", emailDetail);
-    // Reset form after submission
-    setEmailDetail({
-      recipientEmail: "info@nyameduagrupp.com",
-      recipientName: "Nyamedua Grupp",
-      subject: "",
-      senderName: "",
-      senderEmail: "",
-      senderPhone: "",
-      message: ""
-    });
+    if (validateForm()) {
+      SendEmail({
+        emailDetail,
+        onSuccess: () => {
+          alert("Email sent successfully!");
+        },
+        onError: () => {
+          alert("Failed to send email. Please try again later."); 
+        }
+      });
+      // Here you would typically send the email using an API or service like EmailJS
+      console.log("Email Details:", emailDetail);
+      // Reset form after submission
+      setEmailDetail({
+        recipientEmail: "info@nyameduagrupp.com",
+        recipientName: "Nyamedua Grupp",
+        subject: "",
+        senderName: "",
+        senderEmail: "",
+        senderPhone: "",
+        message: ""
+      });
+      setSubmitted(true);  
+    }
   };
   // This is a simple home page component that can be used in the in any part of the website.
   return (
@@ -109,7 +132,7 @@ export default function ContactPageComponent() {
                 <div className="flex space-x-4 mb-4 border-t border-gray-300 pt-4">
                   <div className="">
                     <h2 className="text-primarycolor text-base font-medium mb-2">Phone</h2>
-                    <p className="text-accent text-sm">+233 55 0994 6300</p>
+                    <p className="text-accent text-sm">+233 50 994 6300</p>
                   </div>
                   <div className="border-l border-gray-300 pl-4">
                     <h2 className="text-primarycolor text-base font-medium mb-2">Email Address</h2>
@@ -157,6 +180,7 @@ export default function ContactPageComponent() {
                         className=" w-[85%] p-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-secondary transition-colors duration-300 ease-in-out"
                         required
                       />
+                      {errors.subject && <p className="text-red-500 text-sm">{errors.subject}</p>}
                     </div>
                     <div className="space-y-2">
                       <label className="block text-accent font-medium">Name <span className="text-red-500 pl-1">*</span></label>
@@ -169,6 +193,7 @@ export default function ContactPageComponent() {
                         className=" w-full p-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-secondary transition-colors duration-300 ease-in-out"
                         required
                       />
+                      {errors.senderName && <p className="text-red-500 text-sm">{errors.senderName}</p>}
                     </div>
                     <div className="space-y-2">
                       <label className="block text-accent font-medium">Email <span className="text-red-500 pl-1">*</span></label>
@@ -181,6 +206,7 @@ export default function ContactPageComponent() {
                         className=" w-full p-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-secondary transition-colors duration-300 ease-in-out"
                         required
                       />
+                      {errors.senderEmail && <p className="text-red-500 text-sm">{errors.senderEmail}</p>}
                     </div>
                     <div className="space-y-2">
                       <label className="block text-accent font-medium">Phone <span className="text-red-500 pl-1">*</span></label>
@@ -193,6 +219,7 @@ export default function ContactPageComponent() {
                         className=" w-full p-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-secondary transition-colors duration-300 ease-in-out"
                         required
                       />
+                      {errors.senderPhone && <p className="text-red-500 text-sm">{errors.senderPhone}</p>}
                     </div>
                     <div className="space-y-2">
                       <label className="block text-accent font-medium">Message <span className="text-red-500 pl-1">*</span></label>
@@ -204,9 +231,11 @@ export default function ContactPageComponent() {
                         className="w-full h-[150px] p-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-secondary transition-colors duration-300 ease-in-out"
                         required
                       />
+                      {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
                     </div>
                   </div>
                   <Button label="Submit" type="submit"  />
+                  {submitted && <p className="text-green-500 text-sm">Your message has been sent successfully!</p>}
                 </form>
               </div>
             </div>
