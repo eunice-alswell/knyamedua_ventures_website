@@ -89,9 +89,9 @@ export default function AboutPageComponent() {
                 </div>
                 <div className="w-full lg:w-1/2 flex items-center">
                   <div>
-                    <div className="flex items-center justify-center lg:justify-start gab-6">
+                    <div className="flex items-center justify-center lg:justify-start gab-6 fadeInLeft">
                       <hr className="w-20 border-1 border-secondary"/>
-                      <h1 className="text-xl font-normal text-primarycolor p-4 fadeInBottom">Who We Are</h1>
+                      <h1 className="text-xl font-normal text-primarycolor p-4">Who We Are</h1>
                     </div>
                     <p className="text-base text-accent mb-6 fadeInBottom">
                       Nyamedua Grupp is an indigenous Ghanaian firm in the oil and gas industry, committed to delivering responsible and efficient energy solutions that serve people and protect the planet. Our expertise spans the design, installation, and supply of commercial LPG systems and accessories tailored to the unique needs of commercial and industrial clients.
@@ -162,9 +162,9 @@ export default function AboutPageComponent() {
                 </div>
                 <div className="flex items-center">
                   <div>
-                    <div className="flex items-center justify-center lg:justify-start gab-6">
+                    <div className="flex items-center justify-center lg:justify-start gab-6 fadeInLeft">
                       <hr className="w-20 border-1 border-secondary"/>
-                      <h1 className="text-xl font-normal text-primarycolor p-4 fadeInBottom">What We Do</h1>
+                      <h1 className="text-xl font-normal text-primarycolor p-4">What We Do</h1>
                     </div>  
                     <p className="text-base text-accent mb-6 fadeInBottom">
                       We provide safe, efficient LPG solutions — from commercial tank installations to heating systems and certified components — built to serve industrial and commercial needs. 
@@ -223,9 +223,9 @@ export default function AboutPageComponent() {
                 </div>
                 <div className="w-full flex items-center pb-15">
                   <div className="">
-                    <div className="flex items-center justify-center lg:justify-start gab-6">
+                    <div className="flex items-center justify-center lg:justify-start gab-6 fadeInLeft">
                       <hr className="w-20 border-1 border-secondary"/>
-                      <h1 className="text-xl font-normal text-primarycolor p-4 fadeInBottom">Why Choose Us</h1>
+                      <h1 className="text-xl font-normal text-primarycolor p-4">Why Choose Us</h1>
                     </div>
                     <p className="text-base text-accent mb-6 fadeInBottom">
                       Trusted across Ghana, we combine expert service, certified products, reliable support, and great value to deliver complete, worry-free LPG solutions and industrial cookstove.
@@ -317,9 +317,9 @@ export default function AboutPageComponent() {
                 </div>
                 <div className="w-full lg:w-1/2 flex items-center">
                   <div>
-                    <div className="flex items-center justify-center lg:justify-start gab-6">
+                    <div className="flex items-center justify-center lg:justify-start gab-6 fadeInLeft">
                       <hr className="w-20 border-1 border-secondary"/>
-                      <h1 className="text-xl font-normal text-primarycolor p-4 fadeInBottom">About Our CEO</h1>
+                      <h1 className="text-xl font-normal text-primarycolor p-4">About Our CEO</h1>
                     </div>
                     <h2 className="text-2xl text-primarycolor text-center lg:text-left font-medium font-Poppins mb-3 fadeInBottom"> Mr. Daniel Baidoo Keegan </h2>
                     <p className="text-base text-accent mb-6 fadeInBottom">

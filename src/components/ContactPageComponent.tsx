@@ -110,9 +110,9 @@ export default function ContactPageComponent() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Contact Information */}
               <div>
-                <div className="flex items-center justify-center lg:justify-start gab-6">
+                <div className="flex items-center justify-center lg:justify-start gab-6 fadeInLeft">
                   <hr className="w-20 border-1 border-secondary"/>
-                  <h1 className="text-lg font-normal text-primarycolor p-4 fadeInBottom">Reach Out</h1>
+                  <h1 className="text-lg font-normal text-primarycolor p-4">Reach Out</h1>
                 </div>
                 <p className="text-accent text-sm mb-4">We'd love to hear from you! Whether you have a question about our services, pricing, or anything else, our team is ready to answer all your questions.</p>
                 {/* Contact Addresses */}

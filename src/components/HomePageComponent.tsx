@@ -42,22 +42,6 @@ export default function HomePageComponent() {
         <Navbar/>
         <main className="min-h-screen font-primary overflow-x-hidden ">
           <div className="relative h-[200vh] lg:h-[130vh] w-full mb-10">
-            {/* <div className="h-[100vh] w-full bg-[url('/nyamedua_img/NYAMEDUA_GRUPP_BANNER.png')] bg-cover bg-center">
-              <div className="flex items-center justify-center lg:justify-start h-full w-full bg-primarycolor/60 ">
-                <div className="max-w-screen-xl mx-auto text-white px-6">
-                  <div className="w-full lg:w-2/4 text-center lg:text-left space-y-8">
-                  <div className="w-full text-center space-y-8 lg:px-30">
-                    <h1 className="text-3xl lg:text-5xl font-bold fadeInBottom ">Reliable LPG Solutions for Safer, Smarter Energy Use</h1>
-                    <p className="text-base lg:text-xl fadeInBottom">Your trusted partner in LPG commercial storage, heating systems, and industrial safety components — delivering excellence, durability, and innovation across Ghana’s oil and gas industry.</p>
-                    <div className="flex flex-col lg:flex-row space-y-5 lg:space-y-0 lg:space-x-4 rtl:space-x-reverse justify-center lg:justify-start">
-                    <div className="flex flex-col lg:flex-row space-y-5 lg:space-y-0 lg:space-x-4 rtl:space-x-reverse justify-center">
-                      <Button label="Explore Our Services" onClick={handleServices}/>
-                      <Button label="Get a Free Quote" onClick={handleContactUs} variantStyle="primarydefualtStyle"/>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> */}
             <Carousel/>
             {/* ----card section---- */}
             <div className="absolute left-1/2 bottom-[0.001%] lg:bottom-[1%] w-full z-10">
@@ -115,9 +99,9 @@ export default function HomePageComponent() {
                 </div>
                 <div className="w-full lg:w-1/2 flex items-center">
                   <div>
-                    <div className="flex items-center justify-center lg:justify-start gab-6">
+                    <div className="flex items-center justify-center lg:justify-start gab-6 fadeInLeft">
                       <hr className="w-20 border-1 border-secondary"/>
-                      <h1 className="text-xl font-normal text-primarycolor p-4 fadeInBottom">About Us</h1>
+                      <h1 className="text-xl font-normal text-primarycolor p-4">About Us</h1>
                     </div>
                     <p className="text-2xl text-primarycolor text-center lg:text-left font-medium font-Poppins mb-6 fadeInBottom">
                       We provides safe, certified LPG solutions and high-quality energy products for commercial and industrial needs.
@@ -128,7 +112,7 @@ export default function HomePageComponent() {
                     <p className="text-base text-accent mb-6 fadeInBottom">
                       Our mission is to deliver high-quality LPG products and services that meet the highest standards of safety and compliance. We pride ourselves on our expertise, innovation, and dedication to customer satisfaction.
                     </p>
-                    <div className="flex justify-center lg:justify-start fadeInBottom">
+                    <div className="flex justify-center lg:justify-start">
                       <Button label="More About Us" size="large" onClick={handleAboutUs}/>
                     </div>
                   </div>
@@ -144,9 +128,9 @@ export default function HomePageComponent() {
 
           <div className="max-w-screen-xl mx-auto">
             <div className="w-full px-6 py-10">
-              <div className="flex items-center justify-center lg:justify-start gab-6">
+              <div className="flex items-center justify-center lg:justify-start gab-6 fadeInLeft">
                 <hr className="w-20 border-1 border-secondary"/>
-                <h1 className="text-xl font-normal text-primarycolor p-4 fadeInBottom">Our Services</h1>
+                <h1 className="text-xl font-normal text-primarycolor p-4">Our Services</h1>
               </div>
               <div className="flex flex-wrap lg:flex-nowrap items-start justify-center lg:justify-evenly">
                 <h2 className="lg:w-2/4 text-3xl lg:text-4xl text-primarycolor font-semibold pb-5">What Services we offer</h2>
@@ -211,7 +195,7 @@ export default function HomePageComponent() {
                 {/* Text Section */}
                 <div className="flex items-center">
                   <div>
-                    <div className="flex items-center justify-center lg:justify-start gab-6">
+                    <div className="flex items-center justify-center lg:justify-start gab-6 fadeInLeft">
                       <hr className="w-20 border-1 border-secondary"/>
                       <h1 className="text-xl font-normal text-primarycolor p-4 fadeInBottom">What Sets Us Apart</h1>
                     </div>
@@ -261,7 +245,7 @@ export default function HomePageComponent() {
             <div className=" bg-primarycolor h-[60vh]">
               <div className="max-w-screen-xl mx-auto">
                 <div className="w-full px-6 py-10 ">
-                  <div className="flex items-center justify-center gab-6 text-white">
+                  <div className="flex items-center justify-center gab-6 text-white fadeInLeft">
                     <hr className="w-20 border-1 border-secondary"/>
                     <h1 className="text-xl font-normal p-4 fadeInBottom">Our Products</h1>
                   </div>

@@ -127,9 +127,9 @@ export default function ServicePageComponent() {
                     </div>
                     <div className={`w-full lg:w-1/2 flex items-center fadeInBottom ${index % 2 !== 0 ? 'lg:order-1' : 'lg:order-2'}`}>
                       <div>
-                        <div className="flex items-center justify-center lg:justify-start gab-6">
+                        <div className="flex items-center justify-center lg:justify-start gab-6 fadeInLeft">
                           <hr className="w-20 mr-2 border-1 border-secondary"/>
-                          <h2 className="text-3xl font-bold text-primarycolor p-4 fadeInBottom bg-primarycolor/40 rounded-3xl">{service.id}</h2>
+                          <h2 className="text-3xl font-bold text-primarycolor p-4 bg-primarycolor/40 rounded-3xl">{service.id}</h2>
                         </div>
                         <h3 className="text-3xl text-center lg:text-left font-bold text-primarycolor mb-6 fadeInBottom">
                           {service.title}
