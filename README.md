@@ -1,54 +1,69 @@
-# React + TypeScript + Vite
+# Knyamedua Ventures Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the official repository for the Nyamedua Grupp website.
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project contains the source code and documentation for the Knyamedua Ventures website, designed to showcase our services and provide information to our clients.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Responsive and modern design
+- Information about the services and Products
+- Contact form for inquiries
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Getting Started
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. **Clone the repository:**
+  ```bash
+  git clone https://github.com/your-username/knyamedua_ventures_website.git
+  ```
+2. **Navigate to the project directory:**
+  ```bash
+  cd knyamedua_ventures_website
+  ```
+3. **Install dependencies:**  
+  ```bash
+  npm install
+  ```
+  If you are using a different package manager (like Yarn or PNPM), use the appropriate command:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+  - Yarn:
+    ```bash
+    yarn install
+    ```
+  - PNPM:
+    ```bash
+    pnpm install
+    ```
+  This project uses the following main dependencies (see `package.json` for the full list):
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+  - **react** – Frontend library for building user interfaces
+  - **react-dom** – React DOM rendering support
+  - **react-scripts** – Scripts and configuration for Create React App
+  - **emailjs-com** – For sending emails from the contact form
+
+  Make sure Node.js and npm are installed on your system before running these commands.
+
+4. **Run the project:**  
+  ```bash
+  npm start
+  ```
+  This will start the development server. If you are using `email.js` for the contact form, ensure you have configured your EmailJS credentials in your environment variables or configuration file as described in the [EmailJS documentation](https://www.emailjs.com/docs/).
+
+  - If you haven't installed dependencies yet, run:
+    ```bash
+    npm install
+    ```
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+For questions or feedback, please contact [alswelleunice@gmail.com](mailto:alswelleunice@gmail.com).
