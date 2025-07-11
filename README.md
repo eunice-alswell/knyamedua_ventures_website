@@ -49,7 +49,7 @@ This project contains the source code and documentation for the Knyamedua Ventur
   ```bash
   npm start
   ```
-  This will start the development server. If you are using `email.js` for the contact form, ensure you have configured your EmailJS credentials in your environment variables or configuration file as described in the [EmailJS documentation](https://www.emailjs.com/docs/).
+  This will start the development server. If you are using `email.js` for the contact form, ensure you have configured your EmailJS credentials in your environment variables or configuration file as described in the [EmailJS documentation](https://www.emailjs.com/docs/)
 
   - If you haven't installed dependencies yet, run:
     ```bash
