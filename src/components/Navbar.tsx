@@ -70,7 +70,9 @@ export default function Navbar() {
               <li key={link.name}>
                 <NavLink
                   to={link.path}
-                  onClick={() => setIsMenuOpen(false)} // closes menu on nav click
+                  onClick={() => {setIsMenuOpen(false);
+                                  window.scrollTo({ top: 0, behavior: "smooth" });
+                                }} // closes menu on nav click
                   className={({ isActive }: { isActive: boolean }) =>
                     `block py-2 pl-3 pr-4 relative group link-underline transition-colors duration-300 ${
                       isActive

@@ -254,7 +254,11 @@ export const productData: ProductCardProps[] = [
             {
                 productImage: "/nyamedua_img/liquid_guages.jpg",
                 productName: "Liquid Gauge"
-            }
+            },
+            {
+                productImage: "/nyamedua_img/liquid_guages.jpg",
+                productName: "Liquid Gauge"
+            },
         ],
         longDesc1:"Our precision-engineered liquid gauges are designed to help you monitor LPG levels in real-time. These gauges are vital for storage management, letting you detect when levels are too low or dangerously high — reducing the risk of running out or overfilling tanks.",
         longDesc2:"They’re built for both indoor and outdoor use, offering a clear, easy-to-read interface even in tough working conditions. Whether installed on stationary tanks or mobile units, these gauges enhance operational efficiency and safety compliance for any LPG-dependent business."

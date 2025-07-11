@@ -250,7 +250,7 @@ export default function HomePageComponent() {
                     <h1 className="text-xl font-normal p-4 fadeInBottom">Our Products</h1>
                   </div>
                   <div className="flex flex-col items-center justify-center text-white text-center">
-                    <h2 className="text-3xl lg:text-4xl font-semibold pb-5">Expore our Available Products</h2>
+                    <h2 className="text-3xl lg:text-4xl font-semibold pb-5">Explore our Available Products</h2>
                     <p className="text-sm pb-5 lg:px-50">We supply industry-tested and certified LPG equipment that meets the highest safety and efficiency standards. Our products are designed to support safe energy usage across homes, businesses, and industries.</p>
                   </div>
                   <div className="w-full pt-5">

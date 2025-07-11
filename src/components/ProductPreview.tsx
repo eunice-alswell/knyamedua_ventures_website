@@ -10,7 +10,8 @@ import "slick-carousel/slick/slick-theme.css";
 import CTA from "./CTA";
 import type { CTAProps } from "./CTA";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHandshake } from "@fortawesome/free-solid-svg-icons";
+import { faHandshake, faLongArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import Button from "./Button";
 
 
 const productCTA: CTAProps = {
@@ -57,6 +58,17 @@ export default function ProductPreview () {
                 />
 
                 <div className="max-w-screen-xl mx-auto px-4 py-8 space-y-30">
+                    {/* back button*/}
+                    <div className="flex items-center justify-start mb-6">
+                        <Button 
+                            size="large"
+                            variantStyle="noBgStyle"
+                            leftIcon={<FontAwesomeIcon icon={faLongArrowLeft} />}
+                            onClick={() => window.history.back()} 
+                            label="Back to Products"
+                        />
+                        
+                    </div>
                     {/* Product images */}
                     <div className="px-2 lg:px-30 py-8  h-[40vh] md:h-[70vh] lg:h-[70vh]">
                         <Slider {...settings}>
@@ -70,7 +82,7 @@ export default function ProductPreview () {
                                         alt={image.productName ?? "Product Image"}
                                         width="100%"
                                         height="50%"
-                                        className="object-cover w-full h-[40vh] md:h-[70vh] lg:h-[70vh] rounded-lg"
+                                        className="object-fit w-full h-[40vh] md:h-[70vh] lg:h-[70vh] rounded-lg"
                                     />   
                                 </div>
                             ))}

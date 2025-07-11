@@ -59,17 +59,17 @@ export default function Footer() {
                 </div>
                 <div className="flex flex-col items-center justify-center lg:justify-start space-y-3 rtl:space-y-reverse ">
                     <h2 className="w-30 lg:w-2/3 text-lg text-center lg:text-left font-semibold mb-2 border-b-2 border-secondary">Quick Links</h2>
-                    <ul className="space-y-2 mt-4 w-30 lg:w-2/3">
-                        <li><Link to="/" className="hover:text-secondary transition-colors duration-300 ease-in-out">Home</Link></li>
-                        <li><Link to="/about" className="hover:text-secondary transition-colors duration-300 ease-in-out">About Us</Link></li>
-                        <li><Link to="/about" className="hover:text-secondary transition-colors duration-300 ease-in-out">Services</Link></li>
-                        <li><Link to="/products" className="hover:text-secondary transition-colors duration-300 ease-in-out">Products</Link></li>
-                        <li><Link to="/contact" className="hover:text-secondar transition-colors duration-300 ease-in-out">Contact Us</Link></li>
+                    <ul className="space-y-2 text-sm mt-4 w-30 lg:w-2/3 text-white ">
+                        <li><Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="hover:text-secondary transition-colors duration-300 ease-in-out">Home</Link></li>
+                        <li><Link to="/about" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="hover:text-secondary transition-colors duration-300 ease-in-out">About Us</Link></li>
+                        <li><Link to="/about" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="hover:text-secondary transition-colors duration-300 ease-in-out">Services</Link></li>
+                        <li><Link to="/products" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="hover:text-secondary transition-colors duration-300 ease-in-out">Products</Link></li>
+                        <li><Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="hover:text-secondary transition-colors duration-300 ease-in-out">Contact Us</Link></li>
                     </ul>
                 </div>
                 <div className="flex flex-col items-center justify-center lg:justify-start space-y-3 rtl:space-y-reverse">
                     <h2 className="w-50 lg:w-2/3 text-lg font-semibold mb-2 border-b-2 border-secondary">Contact Information</h2>
-                    <ul className="space-y-3 mt-4 w-50 lg:w-2/3">
+                    <ul className="space-y-3 text-sm mt-4 w-50 lg:w-2/3">
                         <li>
                             <a href="tel:+233 55 0994 6300" className="hover:text-secondary transition-colors duration-300 ease-in-out">
                                 <span className="mr-2">
@@ -105,7 +105,7 @@ export default function Footer() {
             </div>
             <hr className="my-6"/>
             <div className="flex flex-wrap lg:flex-nowrap items-center justify-center lg:justify-between space-y-2 ">
-                <p className="text-xs">Designed by <a href="" className="text-white underline">Altynova Technoliges</a></p>
+                <p className="text-xs">Designed by <a href="" className="text-white underline">Altynova Technologies</a></p>
                 <p className="text-sm">© {new Date().getFullYear()} Nyamedua Grupp. All rights reserved.</p>
             </div>
         </div>  
