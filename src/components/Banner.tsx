@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CountUp from "./CountUp";
 import { faBuildingCircleCheck } from "@fortawesome/free-solid-svg-icons/faBuildingCircleCheck";
 import { faBuildingFlag, faPeopleCarryBox, faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
-import { clientTelData } from "../utils/clientTelData";
+// import { clientTelData } from "../utils/clientTelData";
 
 
 
@@ -21,7 +21,7 @@ export default function Banner() {
         },
         {
             icon: <FontAwesomeIcon icon={faPeopleGroup} className="text-secondary text-3xl lg:text-4xl" />,
-            quantity: clientTelData.length,
+            quantity: 100,
             text: "satisfied clients"
         },
         {
